@@ -46,3 +46,10 @@ jobs:
         with:
           name: windowsBuild
           path: export/release/windows/bin
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: windowsBuild
+          path: ./output/          
+      - name: Zip artifact for deployment
+        run: zip release.zip ./output -r
