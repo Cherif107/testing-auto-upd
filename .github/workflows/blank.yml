@@ -46,3 +46,12 @@ jobs:
         with:
           name: windowsBuild
           path: export/release/windows/bin
+  burp:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: my-artifact
+        path: your/destination/dir
+    - name: Display structure of downloaded files
+      run: ls -R your/destination/dir
