@@ -51,7 +51,7 @@ jobs:
     steps:
     - uses: actions/download-artifact@v4
       with:
-        name: my-artifact
-        path: your/destination/dir
+        name: build
+        path: export
     - name: Display structure of downloaded files
-      run: ls -R your/destination/dir
+      run: ls -R export
